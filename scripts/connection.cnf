@@ -1,0 +1,6 @@
+connection.cnf 
+[client]
+user=myuser
+password="pass"
+host=172.16.5.25
+port=3306
