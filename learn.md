@@ -12,3 +12,4 @@
 
 * https://www.mysqltutorial.org
 
+* https://mariadb.com/kb/en/database-theory/
