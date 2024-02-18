@@ -18,3 +18,9 @@ SELECT User,Host FROM mysql.user;
 $ mariadb -u user < SQL_dump_file.sql
 ```
 
+# Remove all databases
+
+```
+  $ mysql -uroot -p<password> -e "show databases" | grep -v Database | grep -v mysql| grep -v information_schema| gawk '{print "drop database `" $1 "`;select sleep(0.1);"}' | mysql -uroot -p<password>
+```
+
