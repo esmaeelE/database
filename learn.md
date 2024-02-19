@@ -1,5 +1,8 @@
 ## Learning material
 
+* oracle DB archirecture
+
+
 ## books
 
 * [Database System Concepts](https://db-book.com/)
