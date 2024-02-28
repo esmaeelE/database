@@ -6,9 +6,9 @@
  SELECT COUNT(word), word FROM database.table ORDER BY COUNT(word) DESC LIMIT 10;
 ```
 
-Using SELECT keyword
+Using **SELECT** keyword
     - to pick up what coloumn we want
-FROM keyword 
+**FROM** keyword 
     - to specify which table to search
 
 This is complete query.
