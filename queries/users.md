@@ -6,6 +6,13 @@
 SELECT User,Host FROM mysql.user;
 ```
 
+## Show users access and priviledges
+
+```
+SHOW GRANTS FOR 'user_name';
+```
+
+
 ## Create new user with specific priviledges
 
 >
