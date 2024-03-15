@@ -1,9 +1,16 @@
 # some commands
 
-connect to DB engine 
+## connect to DB engine 
 ```
 mariadb --defaults-extra-file=connection.cnf
 ```
+
+
+### Run a sql script file: `info.sql` on Database
+```
+mariadb --defaults-extra-file=connection.cnf --table < info.sql
+```
+
 
 ## Show all database
 ```
