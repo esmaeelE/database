@@ -13,6 +13,8 @@
 
 * https://www.mariadbtutorial.com
 
+* https://database.guide/
+ 
 * https://www.mysqltutorial.org
 
 * https://mariadb.com/kb/en/database-theory/
