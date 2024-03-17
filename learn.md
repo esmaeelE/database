@@ -2,7 +2,10 @@
 
 * oracle DB archirecture
 
+## yt channel
 
+* [Mariadb](https://www.youtube.com/channel/UCFESL9PsYAUHICJ_jqlqyRw)
+* 
 ## books
 
 * [Database System Concepts](https://db-book.com/)
