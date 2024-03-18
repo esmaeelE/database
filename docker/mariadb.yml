@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mariadb:
+  mariadb_server:
     image: mariadb:latest
     restart: always
     environment:
@@ -9,14 +9,10 @@ services:
       MYSQL_USER: your_database_user
       MYSQL_PASSWORD: your_database_password
     volumes:
-      - mariadb_data:/var/lib/mysql
-      # Bootstrap database
-      # - ./dev/mariadb:/docker-entrypoint-initdb.d
-    pports:
+      - ./data/var/mysql:/var/lib/mysql
+        #- ./data/logs:/logs
+      - ./my.cnf:/etc/mysql/conf.d/custom.cnf
+#       initilize db
+    ports:
       - "3306:3306"
-
-# set a path to store data
-volumes:
-  mariadb_data: /opt/database
-
 
