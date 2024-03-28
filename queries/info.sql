@@ -10,8 +10,15 @@ FROM information_schema.tables
 -- WHERE table_schema = 'mysql'
 GROUP BY table_schema;
 
--- Table size, for specific database_name: mysql
-SELECT table_name AS "Table", ROUND(((data_length + index_length) / 1024 / 1024), 2) AS "Size (MB)"
-FROM information_schema.TABLES
-WHERE table_schema = "mysql";
 
+
+-- Table size, for specific database_name: mysql
+SELECT
+	table_name AS "Table",
+	ROUND(((data_length + index_length) / 1024 / 1024), 2) AS "Size (MB)",
+	ROUND(((data_length + index_length) / 1024 / 1024 / 1024), 2) AS "Size (GB)"
+FROM
+	information_schema.TABLES
+WHERE
+	table_schema = "new_twitter2"
+ORDER BY (data_length + index_length) DESC;  
