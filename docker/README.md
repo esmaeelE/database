@@ -4,6 +4,12 @@
 
 ## Mariadb 
 
+Create data direcroty
+```
+mkdir -p data/var/mysql
+```
+
+
 ```
 $ docker-compose -f mariadb.yml up -d 
 ```
