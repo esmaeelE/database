@@ -1,5 +1,11 @@
 # About these scripts
 
+## connect to DB without password
+
+```
+mariadb --defaults-extra-file=secret.cnf
+```
+
 ## create_db_table.sh
 
 * May cause RCE attack (Remote Code Execution) or SQL injection
