@@ -11,8 +11,14 @@ mkdir -p data/var/mysql
 
 
 ```
-$ docker-compose -f mariadb.yml up -d 
+$ docker-compose -f mariadb.yml up -d
+or podman
+
+$ apt install podman podman-compose
+$ podman-compose -f mariadb.yml up -d 
+
 ```
+
 https://hub.docker.com/_/mariadb
 
 
