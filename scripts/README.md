@@ -22,7 +22,6 @@ mariadb --defaults-extra-file=secret.cnf -e "show databases;"
 
 * May cause RCE attack (Remote Code Execution) or SQL injection
 * Host machine must have mariadb-client application on debian install `apt install mariadb-client`
-* 
 
 ## Show all users
 
