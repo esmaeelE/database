@@ -6,6 +6,14 @@
 mariadb --defaults-extra-file=secret.cnf
 ```
 
+To run above command you need mariadb-client package.
+```
+apt install mariadb-client
+```
+Or use docker container.
+
+
+
 ## create_db_table.sh
 
 * May cause RCE attack (Remote Code Execution) or SQL injection
