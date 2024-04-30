@@ -13,6 +13,10 @@ apt install mariadb-client
 Or use docker container.
 
 
+## Run command in cli
+```
+mariadb --defaults-extra-file=secret.cnf -e "show databases;"
+```
 
 ## create_db_table.sh
 
