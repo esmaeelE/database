@@ -8,7 +8,6 @@
 ## restore
 ```
 ./mongoresore --host 172.16.5.60 -u mongoadmin -pbdung --port 27017 ~/mongo/backup/
-
 ```
 
 ### Download and use these clinet: MongoDB Command Line Database Tools Download as not included in debian 12 
