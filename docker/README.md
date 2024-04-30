@@ -19,6 +19,8 @@ $ podman-compose -f mariadb.yml up -d
 
 ```
 
+For podman use `image: docker.io/mariadb:latest` in maria.yml file.
+
 https://hub.docker.com/_/mariadb
 
 
