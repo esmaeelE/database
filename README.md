@@ -1,4 +1,4 @@
-# database
+# DataBase
 Some database material
 
 
