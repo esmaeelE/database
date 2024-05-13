@@ -1,0 +1,10 @@
+[Unit]
+Description= MariaDB
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/podman start -a deploy_mariadb_server_1 
+ExecStop=/usr/bin/podman stop -t 2 deploy_mariadb_server_1
+
+[Install]
+WantedBy=local.target
