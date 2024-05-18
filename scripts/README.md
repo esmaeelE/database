@@ -46,3 +46,9 @@ $ mariadb -u user < SQL_dump_file.sql
 $ mariadb --defaults-extra-file=secret.cnf -e "show databases" | grep -v Database | grep -v mysql| grep -v information_schema  | awk '{print "drop database `" $1 "`;select sleep(0.1);"}' | mariadb --defaults-extra-file=secret.cnf
 ```
 
+# Dump schema without data
+```
+mariadb-dump --defaults-extra-file=secret.cnf --no-data --all-databases > schema.sql
+```
+
+# 
