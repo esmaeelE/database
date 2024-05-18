@@ -3,7 +3,7 @@
 
 ```
 apt install mariadb-server mariadb-client
-apt install nginx
+apt install nginx nginx-extras
 ```
 
 Permit root login
@@ -11,7 +11,7 @@ Permit root login
 GRANT ALL PRIVILEGES ON *.* TO `root`@`%` IDENTIFIED BY 'password' WITH GRANT OPTION;
 ```
 
-Nginx reverse proxy config
+Nginx reverse proxy config `/etc/nginx/nginx.conf`
 ```
 stream {
         upstream db-maria {
