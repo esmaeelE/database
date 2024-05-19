@@ -61,3 +61,56 @@ port=3306
 
 ...
 
+# Another way
+## Mariadb install and configuration on Debian Based machines
+
+Install latest version of Debian/Ubuntu
+# Install
+```
+sudo apt install mariadb-server mariadb-client
+sudo mysql_secure_installation
+```
+
+# Connect
+```
+mariadb --defaults-extra-file=remote.cnf
+```
+
+```remote.cnf
+[client]
+user=admin_001
+password="password"
+host=1.2.3.4
+port=3306
+```
+
+# Create two new user: admin, connect from remote and localhost
+```
+sudo mariadb
+GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+GRANT ALL ON *.* TO 'admin'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit;
+```
+
+# Check users
+```
+SELECT User,Host FROM mysql.user;
+SHOW GRANTS FOR 'admin'@'%' ;                                                                                           
+```
+%: means remote access user
+
+# expose to 0.0.0.0
+
+```/etc/mysql/mariadb.conf.d/50-server.cnf
+#bind-address            = 127.0.0.1
+bind-address            = 0.0.0.0
+```
+
+And at last restart mariadb service
+```
+sudo systemctl restart mariadb.service
+```
+
+Now we can connect from outside
+
