@@ -23,6 +23,7 @@
 * https://mariadb.com/kb/en/database-theory/
 
 * https://www.tutorialspoint.com/mysql/index.htm
+* https://www.mysqlcalculator.com/
 
 * https://phoenixnap.com/kb/category/databases
 
