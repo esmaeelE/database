@@ -1,7 +1,7 @@
 # Todo
 
 * Dockerize mariadb server
-
+* Install pg, mongo, mariadb, mssql, mysql and usage example.
 ## Topics
 * Relpication
 * Backup
