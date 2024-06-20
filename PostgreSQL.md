@@ -1,5 +1,7 @@
 # PostgreSQL
 
+It's a powerful, open-source relational database system that has a strong reputation for reliability, feature robustness, and performance.
+
 [Cheat Sheet](https://quickref.me/postgres.html)
 
 
