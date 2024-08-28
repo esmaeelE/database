@@ -34,7 +34,15 @@ FLUSH PRIVILEGES ;
 SHOW GRANTS FOR 'username'@'%' ;                                                                                           
 ```
 
+# Change existing user password
 
+```
+ALTER USER 'user'@'localhost' IDENTIFIED BY 'new_password';
+FLUSH PRIVILEGES;
+EXIT;
+```
 
+# second method
 
-                             
+mariadb-secure-installation
+
