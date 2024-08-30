@@ -52,9 +52,9 @@ mariadb-secure-installation
 ```
 CREATE USER 'username'@'%' IDENTIFIED by '!@#nalkfinalkHkkmsknn;ifdovn!@#' ;                                               
 CREATE USER 'username'@'localhost' IDENTIFIED by '!@#nalkfinalkHkkmsknn;ifdovn!@#' ;                                               
-                                                                                                                       
-GRANT ALL ON *.* to 'username'@'%' ;                                                                     
-GRANT ALL ON *.* to 'username'@'localhost' ;                                                                     
+# add WITH GRANT OPTION;  new user can grant access to other users                                                              
+GRANT ALL ON *.* to 'username'@'%' WITH GRANT OPTION;;                                                                     
+GRANT ALL ON *.* to 'username'@'localhost' WITH GRANT OPTION;;                                                                     
                                                                                                                        
 FLUSH PRIVILEGES ;                                                                                                      
                                                                                                                       
