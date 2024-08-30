@@ -43,6 +43,22 @@ EXIT;
 ```
 
 # second method
-
+```
 mariadb-secure-installation
+```
 
+# all db
+
+```
+CREATE USER 'username'@'%' IDENTIFIED by '!@#nalkfinalkHkkmsknn;ifdovn!@#' ;                                               
+CREATE USER 'username'@'localhost' IDENTIFIED by '!@#nalkfinalkHkkmsknn;ifdovn!@#' ;                                               
+                                                                                                                       
+GRANT ALL ON *.* to 'username'@'%' ;                                                                     
+GRANT ALL ON *.* to 'username'@'localhost' ;                                                                     
+                                                                                                                       
+FLUSH PRIVILEGES ;                                                                                                      
+                                                                                                                      
+SHOW GRANTS FOR 'username'@'%' ;
+SHOW GRANTS FOR 'username'@'localhost' ;
+
+```
