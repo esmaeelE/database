@@ -27,7 +27,7 @@ SHOW GRANTS FOR 'user_name';
 ```
 CREATE USER 'username'@'%' IDENTIFIED by '!@#nalkfinalkHkkmsknn;ifdovn!@#' ;                                               
                                                                                                                        
-GRANT SELECT, INSERT ON databasename.* to 'face'@'%' ;                                                                     
+GRANT SELECT, INSERT ON databasename.* to 'username'@'%' ;                                                                     
                                                                                                                        
 FLUSH PRIVILEGES ;                                                                                                      
                                                                                                                        
