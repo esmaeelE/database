@@ -1,6 +1,9 @@
 # Database install with docker 
 
-
+## postgres
+```
+docker compose up -d -f postgres.yml
+```
 
 ## Mariadb 
 
