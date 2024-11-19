@@ -2,7 +2,7 @@
 
 ## postgres
 ```
-docker compose up -d -f postgres.yml
+docker compose -f postgres.yml up -d
 ```
 
 ## Mariadb 
