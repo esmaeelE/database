@@ -27,14 +27,14 @@
 #   Global Variables
 ###############################################################################
 #   DATE                       : USE CURRENT DATE 
-#   DESTINATION                : Set PATH to store files
+#   DESTINATION                : Set DEST_PATH to store files
 #   
 ###############################################################################
 
 DATE=$(date +%Y%m%d_%H%M%S)
-PATH="/home/BACKUP/ARCHIVE/"
-DESTINATION="$PATH/archive"
-SEND="$PATH/send"
+DEST_PATH="/home/BACKUP/ARCHIVE/"
+DESTINATION="$DEST_PATH/archive"
+SEND="$DEST_PATH/send"
 SECRET="/opt/scripts/run/secrets/root@localhost.cnf"
 BACKUP_DIR="/home/BACKUP/ARCHIVE/send"
 
