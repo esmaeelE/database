@@ -1,0 +1,12 @@
+version: '3'
+name: mariadb_server
+services:
+  mariadb_server:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "secretPassword"
+    volumes:
+      - ../data/var/mysql:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/custom.cnf
+    ports:
+      - "3306:3306"

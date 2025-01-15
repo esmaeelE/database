@@ -1,0 +1,8 @@
+select
+	*
+from
+	INFORMATION_SCHEMA.PROCESSLIST
+where
+	Time > 500
+ORDER BY
+	Time DESC;

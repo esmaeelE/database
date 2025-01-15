@@ -1,0 +1,56 @@
+services:
+  postgres-db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  metabase-app:
+    image: metabase/metabase
+    restart: always
+    ports:
+      - 3001:3000
+    volumes:
+      # declare your mount volume /host/dir:/container/dir
+      - ./metabase-data:/metabase-data
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: postgres
+      MB_DB_HOST: postgres-db
+    depends_on:
+      - postgres-db
+    links:
+      - postgres-db
+
+  clickhouse-server:
+    # image: clickhouse/clickhouse-server:24.3.6
+    image: clickhouse/clickhouse-server
+    container_name: clickhouse-server
+    environment:
+      # Default user and database will be created using `init-defaults.sh` script
+      CLICKHOUSE_DB: my_db_name
+      CLICKHOUSE_USER: clickhouse-user-name
+      CLICKHOUSE_PASSWORD: very3ecretP@ssw0rd
+#    ports:
+#      - "0.0.0.0:98123:8123"
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    volumes:
+      - ./data:/var/lib/clickhouse
+      - ./logs:/var/log/clickhouse-server
+    network_mode: host
+    cap_add:
+      - SYS_NICE
+      - NET_ADMIN
+      - IPC_LOCK
+      - SYS_PTRACE

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mariadb_server:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: your_database_user
+      MYSQL_PASSWORD: your_database_password
+    volumes:
+      - ./data/var/mysql:/var/lib/mysql
+        #- ./data/logs:/logs
+      - ./my.cnf:/etc/mysql/conf.d/custom.cnf
+#       initilize db
+    ports:
+      - "3306:3306"
+
