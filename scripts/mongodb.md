@@ -1,5 +1,9 @@
 # nosql DB
 
+## mongo db
+
+[Install](https://github.com/esmaeelE/mongo)
+
 ## backup
 ```
 ./mongodump --host 172.16.5.61 -u mongoadmin -pbdung --port 27017 --out ~/data/mongo/backup/
