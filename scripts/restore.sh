@@ -17,7 +17,7 @@
 #   Author              : Esmaeel
 #
 #   When this script fail critical error occured!
-#
+#   After load dump file you must restart database
 ###############################################################################
 
 ###############################################################################
