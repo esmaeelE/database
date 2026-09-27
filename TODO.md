@@ -14,3 +14,8 @@
 * caching
 * Galera
 * HA Proxy
+
+
+add modern cli tools
+- pgcli
+- mycli

@@ -18,13 +18,11 @@ Template(col, default, len)
 infoschem: int, str, table 
 indexing: matadata DB
 
-
-
 Trigger before DELETE
 
-DML: Data Manipulation Language
-DDL: Data Define Language
-DCL: Data Control Language
+- `DML`: Data Manipulation Language
+- `DDL`: Data Define Language
+- `DCL`: Data Control Language
 
 sqlmap, kali, shell
 mariadb
